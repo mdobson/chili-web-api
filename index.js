@@ -12,7 +12,7 @@ var apigee = new ug.client({
 
 argo()
   .use(titan)
-  .add(UserResource(apigee))
-  .add(EventResource(apigee))
-  .add(DeviceResource(apigee))
+  .add(UserResource,apigee)
+  .add(EventResource,apigee)
+  .add(DeviceResource,apigee)
   .listen(3000);

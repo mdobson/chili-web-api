@@ -1,6 +1,6 @@
 var Users = module.exports = function(ug) {
   this.ug = ug;
-}
+};
 
 Users.prototype.init = function(config) {
   config
@@ -27,5 +27,3 @@ Users.prototype.updateUser = function(env, next) {
 
 };
 
-
-    
