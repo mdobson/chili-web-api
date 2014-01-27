@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "argo": "~0.4.9",
-    "usergrid": "~0.10.7"
+    "usergrid": "~0.10.7",
+    "titan": "~0.1.1"
   }
 }
