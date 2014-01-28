@@ -12,6 +12,15 @@ var apigee = new ug.client({
 
 argo()
   .use(titan)
+  .use(function(handle) {
+    handle('request', function(env, next) {
+      env.errorResponse = function(env, next, response) {
+        env.response.statusCode = 500;
+        env.response.body = {'error':response.error, 'error_message':response.error_message};
+        next(env);
+      };
+    });
+  )
   .add(UserResource,apigee)
   .add(EventResource,apigee)
   .add(DeviceResource,apigee)

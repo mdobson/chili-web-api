@@ -11,7 +11,11 @@ Devices.prototype.init = function(config) {
 };
 
 Devices.prototype.getDevice = function(env, next) {
-
+  var id = env.route.params.id;
+  var opts = {
+    'type':'devices',
+    'uuid':id
+  };
 };
 
 Devices.prototype.register = function(env, next) {
